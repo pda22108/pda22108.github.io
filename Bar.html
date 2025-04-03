@@ -3,169 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Bar Jukebox Guessing Game</title>
+    <title>Virtual Bar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 20px;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .bar {
-            background-color: #34495e;
-            border-radius: 10px;
-            padding: 50px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .jukebox {
-            background-color: #16a085;
-            border-radius: 10px;
+            text-align: center;
             padding: 20px;
-            margin: 30px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 3em;
         }
 
-        .jukebox select, .jukebox button {
-            padding: 10px;
-            font-size: 1.2em;
-            margin: 10px;
-            border-radius: 5px;
-            border: none;
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* 3D Model Styling */
+        .sketchfab-embed-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Virtual Bar UI */
+        .bar-interface {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .bar-interface h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .bar-interface button {
+            padding: 15px 30px;
             background-color: #1abc9c;
             color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-        }
-
-        .jukebox select {
-            width: 200px;
-        }
-
-        .jukebox button:hover, .jukebox select:hover {
-            background-color: #1e7056;
-        }
-
-        .feedback {
             margin-top: 20px;
-            font-size: 1.5em;
-            font-weight: bold;
+            font-size: 1.2em;
         }
 
-        .feedback.correct {
-            color: green;
-        }
-
-        .feedback.incorrect {
-            color: red;
-        }
-
-        .jukebox audio {
-            margin-top: 20px;
-            width: 100%;
+        .bar-interface button:hover {
+            background-color: #16a085;
         }
     </style>
 </head>
 <body>
 
-    <div class="bar">
-        <h1>Welcome to the Virtual Bar!</h1>
-        <p>Listen to the song and guess which one it is from the list below!</p>
-        
-        <div class="jukebox">
-            <h2>Jukebox Guessing Game</h2>
-            <p>Guess the song playing by selecting an option and hitting "Submit".</p>
-            
-            <button onclick="playSong()">Play Song</button>
-            <br>
-            
-            <select id="songSelector" disabled>
-                <option value="song1">Song 1 - "Smooth Jazz"</option>
-                <option value="song2">Song 2 - "Pop Vibes"</option>
-                <option value="song3">Song 3 - "Classic Rock"</option>
-            </select>
-            <br>
-            <button id="submitGuess" onclick="submitGuess()" disabled>Submit Guess</button>
+    <div class="container">
+        <!-- 3D Bar Model (Embed from Sketchfab) -->
+        <div class="sketchfab-embed-wrapper">
+            <iframe title="Bar bar" src="https://skfb.ly/6STEP
+" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen></iframe>
+        </div>
 
-            <div class="feedback" id="feedback"></div>
-            
-            <audio id="audioPlayer" controls>
-                <source id="audioSource" src="" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+        <!-- Virtual Bar UI -->
+        <div class="bar-interface">
+            <h2>Welcome to the Virtual Bar!</h2>
+            <p>Select your drink or enjoy some music!</p>
+            <button onclick="orderDrink()">Order a Drink</button>
+            <button onclick="playMusic()">Play Music</button>
         </div>
     </div>
 
     <script>
-        // Songs array with song names and URLs
-        const songs = {
-            song1: {
-                name: 'Smooth Jazz',
-                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
-',
-            },
-            song2: {
-                name: 'Pop Vibes',
-                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3
-',
-            },
-            song3: {
-                name: 'Classic Rock',
-                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3
-',
-            }
-        };
-
-        let currentSong = '';
-
-        // Play a random song
-        function playSong() {
-            const songKeys = Object.keys(songs);
-            const randomSongKey = songKeys[Math.floor(Math.random() * songKeys.length)];
-            currentSong = randomSongKey;
-
-            // Update the audio source and play it
-            const audioPlayer = document.getElementById('audioPlayer');
-            const audioSource = document.getElementById('audioSource');
-            audioSource.src = songs[randomSongKey].url;
-            audioPlayer.load(); // Reload the audio player with new song
-            audioPlayer.play(); // Play the selected song
-
-            // Enable the song selection dropdown and submit button
-            document.getElementById('songSelector').disabled = false;
-            document.getElementById('submitGuess').disabled = false;
-            document.getElementById('feedback').textContent = ''; // Clear feedback
+        // Simulate ordering a drink
+        function orderDrink() {
+            alert("You've ordered a drink! Cheers!");
         }
 
-        // Submit guess and provide feedback
-        function submitGuess() {
-            const selectedSong = document.getElementById('songSelector').value;
-            const feedback = document.getElementById('feedback');
-            
-            if (selectedSong === currentSong) {
-                feedback.textContent = "Correct! Well done!";
-                feedback.classList.remove('incorrect');
-                feedback.classList.add('correct');
-            } else {
-                feedback.textContent = "Incorrect! Try again!";
-                feedback.classList.remove('correct');
-                feedback.classList.add('incorrect');
-            }
-
-            // Disable the song selection and submit button until next round
-            document.getElementById('songSelector').disabled = true;
-            document.getElementById('submitGuess').disabled = true;
+        // Simulate playing music
+        function playMusic() {
+            const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
+');
+            audio.play();
+            alert("Enjoy the music!");
         }
     </script>
 
 </body>
 </html>
-
-
-
