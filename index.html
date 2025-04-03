@@ -1,95 +1,171 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Διαδραστικό Μπαρ με Jukebox</title>
+    <title>Virtual Bar Jukebox Guessing Game</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #2c2c2c;
-            color: white;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
+            padding: 20px;
         }
-        .bar-room {
-            width: 100%;
-            height: 500px;
-            background-image: url('https://source.unsplash.com/1600x900/?bar');
-            background-size: cover;
-            background-position: center;
-            position: relative;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .jukebox {
-            width: 100px;
-            height: 150px;
-            background-color: #ffcc00;
+
+        .bar {
+            background-color: #34495e;
             border-radius: 10px;
-            position: absolute;
-            top: 50%;
-            left: 30%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            padding: 50px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .bar-counter {
-            width: 60%;
-            height: 50px;
-            background-color: #552200;
-            position: absolute;
-            bottom: 10%;
-            left: 20%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+        .jukebox {
+            background-color: #16a085;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .jukebox select, .jukebox button {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1abc9c;
+            color: white;
             cursor: pointer;
         }
-        .message {
+
+        .jukebox select {
+            width: 200px;
+        }
+
+        .jukebox button:hover, .jukebox select:hover {
+            background-color: #1e7056;
+        }
+
+        .feedback {
             margin-top: 20px;
             font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .feedback.correct {
+            color: green;
+        }
+
+        .feedback.incorrect {
+            color: red;
+        }
+
+        .jukebox audio {
+            margin-top: 20px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <h1>Καλώς ήρθατε στο Virtual Bar!</h1>
-    <p>Κάντε κλικ στο Jukebox για να παίξετε μουσική!</p>
+    <div class="bar">
+        <h1>Welcome to the Virtual Bar!</h1>
+        <p>Listen to the song and guess which one it is from the list below!</p>
+        
+        <div class="jukebox">
+            <h2>Jukebox Guessing Game</h2>
+            <p>Guess the song playing by selecting an option and hitting "Submit".</p>
+            
+            <button onclick="playSong()">Play Song</button>
+            <br>
+            
+            <select id="songSelector" disabled>
+                <option value="song1">Song 1 - "Smooth Jazz"</option>
+                <option value="song2">Song 2 - "Pop Vibes"</option>
+                <option value="song3">Song 3 - "Classic Rock"</option>
+            </select>
+            <br>
+            <button id="submitGuess" onclick="submitGuess()" disabled>Submit Guess</button>
 
-    <div class="bar-room">
-        <div class="jukebox" onclick="toggleMusic()">🎵</div>
-        <div class="bar-counter" onclick="sitAtBar()">🪑 Κάτσε στο μπαρ</div>
+            <div class="feedback" id="feedback"></div>
+            
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </div>
 
-    <p class="message" id="message"></p>
-
-    <audio id="music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-
     <script>
-        let isPlaying = false;
-        function toggleMusic() {
-            let music = document.getElementById("music");
-            let message = document.getElementById("message");
-
-            if (isPlaying) {
-                music.pause();
-                message.innerText = "Το Jukebox σταμάτησε.";
-            } else {
-                music.play();
-                message.innerText = "🎶 Το Jukebox παίζει μουσική!";
+        // Songs array with song names and URLs
+        const songs = {
+            song1: {
+                name: 'Smooth Jazz',
+                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
+',
+            },
+            song2: {
+                name: 'Pop Vibes',
+                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3
+',
+            },
+            song3: {
+                name: 'Classic Rock',
+                url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3
+',
             }
+        };
 
-            isPlaying = !isPlaying;
+        let currentSong = '';
+
+        // Play a random song
+        function playSong() {
+            const songKeys = Object.keys(songs);
+            const randomSongKey = songKeys[Math.floor(Math.random() * songKeys.length)];
+            currentSong = randomSongKey;
+
+            // Update the audio source and play it
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioSource = document.getElementById('audioSource');
+            audioSource.src = songs[randomSongKey].url;
+            audioPlayer.load(); // Reload the audio player with new song
+            audioPlayer.play(); // Play the selected song
+
+            // Enable the song selection dropdown and submit button
+            document.getElementById('songSelector').disabled = false;
+            document.getElementById('submitGuess').disabled = false;
+            document.getElementById('feedback').textContent = ''; // Clear feedback
         }
 
-        function sitAtBar() {
-            document.getElementById("message").innerText = "Κάθισες στη μπάρα! 🪑";
+        // Submit guess and provide feedback
+        function submitGuess() {
+            const selectedSong = document.getElementById('songSelector').value;
+            const feedback = document.getElementById('feedback');
+            
+            if (selectedSong === currentSong) {
+                feedback.textContent = "Correct! Well done!";
+                feedback.classList.remove('incorrect');
+                feedback.classList.add('correct');
+            } else {
+                feedback.textContent = "Incorrect! Try again!";
+                feedback.classList.remove('correct');
+                feedback.classList.add('incorrect');
+            }
+
+            // Disable the song selection and submit button until next round
+            document.getElementById('songSelector').disabled = true;
+            document.getElementById('submitGuess').disabled = true;
         }
     </script>
 
 </body>
 </html>
+
+
+
