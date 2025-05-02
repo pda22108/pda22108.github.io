@@ -32,9 +32,11 @@
     <!-- ΕΔΩ ΠΕΡΙΓΡΑΦΩ ΤΗ ΣΚΗΝΗ -->
     <a-scene cursor="rayOrigin: mouse" background="color:cadetblue" ondblclick="this.requestFullscreen();" embedded>
     <a-assets>
-        <a-asset-item id="jukebox" src="jukebox.gltf">
-    </a-asset-item></a-assets>      
-        <a-plane width="40" height="8" position="-20 4 0" rotation="0 90 0">
+        <a-asset-item id="jukebox" src="jukebox.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#jukebox" scale="5 5 5" shadow="receive: false" position="-50 25 -50"></a-entity> 
+    <a-entity gltf-model="#jukebox" scale="5 5 5" shadow="receive: false" position="50 25 -50"></a-entity> 
+         <a-plane width="40" height="8" position="-20 4 0" rotation="0 90 0">
         </a-plane> 
         <a-plane width="40" height="8" position="20 4 0" rotation="0 -90 0"></a-plane> 
         <a-plane width="40" height="8" position="0 4 20" material="side:back"></a-plane>
