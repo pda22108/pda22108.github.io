@@ -30,6 +30,15 @@
     <hr />
     <div align="center">
     <!-- ΕΔΩ ΠΕΡΙΓΡΑΦΩ ΤΗ ΣΚΗΝΗ -->
+        <a-plane static-body width="40" height="8" position="-20 4 0" rotation="0 90 0">
+        </a-plane> 
+        <a-plane static-body width="40" height="8" position="20 4 0" rotation="0 -90 0"></a-plane> 
+        <a-plane static-body width="40" height="8" position="0 4 20" material="side:back"></a-plane>
+        <a-plane static-body width="40" height="8" position="0 4 -20"></a-plane> 
+        <a-plane static-body width="40" height="40" position="0 0 0" rotation="-90 0 0"></a-plane>
+        <a-plane static-body width="40" height="40" position="0 8 0" rotation="90 0 0"></a-plane>
+         
+        
     <a-scene cursor="rayOrigin: mouse" background="color:cadetblue" ondblclick="this.requestFullscreen();" embedded>
 <a-assets>
     <a-asset-item id="jukebox" src="jukebox.gltf"></a-asset-item>
