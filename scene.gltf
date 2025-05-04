@@ -3,303 +3,293 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 27961,
+      "count": 3980,
       "max": [
-        113.43804931640625,
-        498.5055847167969,
-        148.16445922851563
+        0.9637248516082764,
+        2.000000238418579,
+        0.9770509600639343
       ],
       "min": [
-        -93.11534881591797,
-        6.628444671630859,
-        -148.42648315429688
+        -0.9637247920036316,
+        0.011787197552621365,
+        -0.7418149709701538
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 335532,
+      "byteOffset": 47760,
       "componentType": 5126,
-      "count": 27961,
+      "count": 3980,
       "max": [
-        1.0,
+        0.9999068975448608,
         1.0,
         1.0
       ],
       "min": [
-        -1.0,
-        -1.0,
+        -0.9999068975448608,
+        -0.999769926071167,
         -1.0
       ],
       "type": "VEC3"
     },
     {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 27961,
-      "max": [
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC4"
-    },
-    {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 27961,
+      "count": 3980,
       "max": [
-        0.9939236044883728,
-        0.999500572681427
+        0.8750001788139343,
+        1.0000001192092896
       ],
       "min": [
-        0.0004966855049133301,
-        0.0004995651543140411
+        0.125,
+        0.0
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 80448,
+      "count": 17664,
       "type": "SCALAR"
     },
     {
       "bufferView": 2,
-      "byteOffset": 671064,
+      "byteOffset": 95520,
       "componentType": 5126,
-      "count": 18,
+      "count": 23511,
       "max": [
-        87.43930053710938,
-        453.6784973144531,
-        93.41990661621094
+        3.3175995349884033,
+        0.9609604477882385,
+        3.321985960006714
       ],
       "min": [
-        87.43929290771484,
-        360.4982604980469,
-        -93.41990661621094
+        -3.334282636642456,
+        -185.1866912841797,
+        -3.321988344192505
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 671280,
+      "byteOffset": 377652,
       "componentType": 5126,
-      "count": 18,
+      "count": 23511,
       "max": [
         1.0,
-        5.759026748819451e-07,
-        1.1329986193686636e-07
+        1.0,
+        1.0
       ],
       "min": [
-        1.0,
-        -3.967937800553045e-07,
-        -2.7829352688968356e-07
+        -1.0,
+        -1.0,
+        -1.0
       ],
       "type": "VEC3"
     },
     {
-      "bufferView": 3,
-      "byteOffset": 447376,
-      "componentType": 5126,
-      "count": 18,
-      "max": [
-        3.967937800553045e-07,
-        1.0,
-        6.163885245769052e-06,
-        1.0
-      ],
-      "min": [
-        -5.759023906648508e-07,
-        1.0,
-        -1.6695803424227051e-06,
-        1.0
-      ],
-      "type": "VEC4"
-    },
-    {
       "bufferView": 1,
-      "byteOffset": 223688,
+      "byteOffset": 31840,
       "componentType": 5126,
-      "count": 18,
+      "count": 23511,
       "max": [
-        0.6841080784797668,
-        0.697699785232544
+        1.0000001192092896,
+        1.0000001192092896
       ],
       "min": [
-        0.606525182723999,
-        0.5421348810195923
+        0.0,
+        0.010000006295740604
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
-      "byteOffset": 321792,
+      "byteOffset": 70656,
       "componentType": 5125,
-      "count": 42,
+      "count": 70656,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 659784,
+      "componentType": 5126,
+      "count": 936,
+      "max": [
+        0.18160341680049896,
+        0.015000003390014172,
+        0.02266598865389824
+      ],
+      "min": [
+        -0.18043290078639984,
+        -0.015000003390014172,
+        -0.25323018431663513
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 671016,
+      "componentType": 5126,
+      "count": 936,
+      "max": [
+        0.9998878240585327,
+        1.0,
+        0.9984169602394104
+      ],
+      "min": [
+        -0.9998652935028076,
+        -1.0,
+        -0.9984222054481506
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 219928,
+      "componentType": 5126,
+      "count": 936,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 353280,
+      "componentType": 5125,
+      "count": 5112,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "zlyle90 (https://sketchfab.com/zlyle90)",
-      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/jukebox-086883d6e8cb42228917b5727fd08b78",
-      "title": "Jukebox"
+      "author": "Mr.N0b0dy (https://sketchfab.com/Mr.N0b0dy)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/bar-stool-98c7d9cd829641f281e0177355fdc2c7",
+      "title": "Bar stool"
     },
-    "generator": "Sketchfab-12.65.0",
+    "generator": "Sketchfab-12.57.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 321960,
+      "byteLength": 373728,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 223832,
-      "byteOffset": 321960,
+      "byteLength": 227416,
+      "byteOffset": 373728,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 671496,
-      "byteOffset": 545792,
+      "byteLength": 682248,
+      "byteOffset": 601144,
       "byteStride": 12,
-      "name": "floatBufferViews",
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 447664,
-      "byteOffset": 1217288,
-      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 1664952,
+      "byteLength": 1283392,
       "uri": "scene.bin"
-    }
-  ],
-  "images": [
-    {
-      "uri": "textures/lambert1_baseColor.png"
-    },
-    {
-      "uri": "textures/lambert1_metallicRoughness.png"
-    },
-    {
-      "uri": "textures/lambert1_emissive.png"
-    },
-    {
-      "uri": "textures/lambert1_normal.png"
-    },
-    {
-      "uri": "textures/lambert2_baseColor.png"
-    },
-    {
-      "uri": "textures/lambert2_metallicRoughness.png"
-    },
-    {
-      "uri": "textures/lambert2_normal.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "emissiveFactor": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "emissiveTexture": {
-        "index": 2
-      },
-      "name": "lambert1",
-      "normalTexture": {
-        "index": 3
-      },
-      "occlusionTexture": {
-        "index": 1
-      },
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        },
-        "metallicRoughnessTexture": {
-          "index": 1
-        }
-      }
-    },
-    {
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "lambert2",
-      "normalTexture": {
-        "index": 6
-      },
-      "occlusionTexture": {
-        "index": 5
-      },
+      "name": "Material.002",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           1.0,
-          1.0,
-          1.0,
-          0.5
+          0.0,
+          0.0,
+          1.0
         ],
-        "baseColorTexture": {
-          "index": 4
-        },
-        "metallicRoughnessTexture": {
-          "index": 5
-        }
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.212727
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "roughnessFactor": 0.12828785786883795
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.057",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "roughnessFactor": 0.2
       }
     }
   ],
   "meshes": [
     {
-      "name": "Jukebox_Low_lambert1_0",
+      "name": "Object_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3
+            "TEXCOORD_0": 2
           },
-          "indices": 4,
+          "indices": 3,
           "material": 0,
           "mode": 4
         }
       ]
     },
     {
-      "name": "Jukebox_Low_lambert2_0",
+      "name": "Object_1",
       "primitives": [
         {
           "attributes": {
-            "NORMAL": 6,
-            "POSITION": 5,
-            "TANGENT": 7,
-            "TEXCOORD_0": 8
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
           },
-          "indices": 9,
+          "indices": 7,
           "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
           "mode": 4
         }
       ]
@@ -311,21 +301,21 @@
         1
       ],
       "matrix": [
-        0.0030487803742289543,
+        0.6666666865348816,
+        -2.3804997541821127e-32,
+        1.072081780589012e-16,
+        0.0,
+        1.072081780589012e-16,
+        1.4802974102831747e-16,
+        -0.6666666865348816,
         0.0,
         0.0,
+        0.6666666865348816,
+        1.4802974102831747e-16,
         0.0,
-        0.0,
-        6.769652336988573e-19,
-        -0.0030487803742289543,
-        0.0,
-        0.0,
-        0.0030487803742289543,
-        6.769652336988573e-19,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        2.6020852139652106e-18,
+        -1.1940765655200862e-32,
+        5.377642775528102e-17,
         1.0
       ],
       "name": "Sketchfab_model"
@@ -334,54 +324,117 @@
       "children": [
         2
       ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7
+      ],
       "matrix": [
         1.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        0.0,
+        2.220446049250313e-16,
         1.0,
         0.0,
         0.0,
         -1.0,
-        0.0,
+        2.220446049250313e-16,
         0.0,
         0.0,
         0.0,
         0.0,
         1.0
       ],
-      "name": "1188d1efbe59447991f6fea40ffb5c32.fbx"
+      "name": "GLTF_SceneRootNode"
     },
     {
       "children": [
-        3
+        4
       ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        4,
-        5
+      "matrix": [
+        0.234491765499115,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06750565767288208,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.234491765499115,
+        0.0,
+        0.005435943603515625,
+        0.5985788106918335,
+        0.010626912117004395,
+        1.0
       ],
-      "name": "Jukebox_Low"
+      "name": "Cube_0"
     },
     {
       "mesh": 0,
-      "name": "Jukebox_Low_lambert1_0"
+      "name": "Object_4"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        0.061593398451805115,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0033035941887646914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.061593398451805115,
+        0.0,
+        0.005435943603515625,
+        0.5981775522232056,
+        -0.0043981075286865234,
+        1.0
+      ],
+      "name": "Cylinder.025_1"
     },
     {
       "mesh": 1,
-      "name": "Jukebox_Low_lambert2_0"
-    }
-  ],
-  "samplers": [
+      "name": "Object_6"
+    },
     {
-      "magFilter": 9729,
-      "minFilter": 9987,
-      "wrapS": 10497,
-      "wrapT": 10497
+      "children": [
+        8
+      ],
+      "matrix": [
+        0.773201048374176,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.773201048374176,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.773201048374176,
+        0.0,
+        0.005435943603515625,
+        0.196979358792305,
+        -0.0043981075286865234,
+        1.0
+      ],
+      "name": "NurbsCurve.001_3"
+    },
+    {
+      "mesh": 2,
+      "name": "Object_8"
     }
   ],
   "scene": 0,
@@ -391,36 +444,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "sampler": 0,
-      "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
-    },
-    {
-      "sampler": 0,
-      "source": 3
-    },
-    {
-      "sampler": 0,
-      "source": 4
-    },
-    {
-      "sampler": 0,
-      "source": 5
-    },
-    {
-      "sampler": 0,
-      "source": 6
     }
   ]
 }
