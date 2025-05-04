@@ -30,8 +30,9 @@
     <hr />
     <div align="center">
     <!-- ΕΔΩ ΠΕΡΙΓΡΑΦΩ ΤΗ ΣΚΗΝΗ -->
-    <a-scene cursor="rayOrigin: mouse" background="color:pink" ondblclick="this.requestFullscreen();" embedded>
-    <a-assets>
+    <a-scene 
+        cursor="rayOrigin: mouse" background="color:pink" ondblclick="this.requestFullscreen();" embedded>
+   <a-assets>
         <a-asset-item id="jukebox" src="jukebox.gltf"></a-asset-item>
     </a-assets>   
     <a-entity gltf-model="#jukebox" scale="5 5 5" shadow="receive: false" position="0 0 0"></a-entity>
@@ -42,6 +43,7 @@
         <a-plane width="20" height="20" position="0 0 0" rotation="-90 0 0"></a-plane>
         <a-plane width="20" height="20" position="0 8 0" rotation="90 0 0"></a-plane>
         <a-plane id="door" height="8" width="4" color="black" position "0 0 0"></a-plane>
+        <a-light type="ambient" intensity="0.25"></a-light>
     </a-scene>
     </div>
     <hr />
