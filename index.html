@@ -12,12 +12,24 @@
                 });
             }
         });
-        var pos = document.getElementById('cam').getAttribute('position');
-        if (pos.x < -19) pos.x = -19;
-        if (pos.x > 19) pos.x = 19;
-        if (pos.z < -19) pos.z = -19;
-        if (pos.z > 19) pos.z = 19;
-        document.getElementById('cam').setAttribute('position', pos);
+       <script>
+      var locked = true, tool false, gas true,   message = "", time = 5000;
+
+     AFRAME.registerComponent('updating', {tick: function () {
+        if (gas) time--;
+        if (time < 0) message = "Game over...";
+        if (message!= "")this.el.setAttribute('value', message);else this.el.setAttribute('value',''+Math.round(time / 100));
+
+       var pos =document.getElementById('cam').getAttribute('position');
+       if (pos.x-19) pos.x=-19;
+       if (pos.x > 19) pos.x = 19;
+       if (pos.z-19) pos.z = -19;
+       if (pos.z > 19) pos.z = 19;});
+
+</script>
+
+document.getElementById('cam').setAttribute('position', pos);
+
     </script>
     <style>
         h1 { text-align: center; }
