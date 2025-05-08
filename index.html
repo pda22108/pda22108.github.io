@@ -23,7 +23,6 @@
                 });
             }
         });
-        
     </script>
     <style>
         h1 { text-align: center; }
@@ -45,18 +44,8 @@
         εμφανιστούν στην οθόνη του. Αν επιλέξει το σωστό τραγούδι ο barman τον κερνάει ένα σφηνάκι. Αν επιλέξει λάθος
         τον διώχνουν από το bar.</P>
     <hr />
-    <a-scene cursor="rayOrigin: mouse" background="color:cadetblue" ondblclick="this.requestFullscreen();" embedded>
-            <a-plane static-body width=“40” height=“8” position=“20 4 0” rotation=“0 -90 0”></a-plane>
-            <a-plane static-body width=“40” height=“8” position=“0 4 20” material=“side:back”></a-plane>
-            <a-plane static-body width=“40” height=“8” position=“0 4 -20”></a-plane>
-            <a-plane static-body width=“40” height=“40” position=“0 0 0” rotation=“-90 0 0”></a-plane>
-            <a-plane static-body width=“40” height=“40” position=“0 8 0” rotation=“90 0 0”></a-plane>
-            <a-plane id=“door” height=“4” width=“2” color=“darkgreen” position=“0 2 -19.9” sound=“src: url(mixkit-locking-a-shop-door-with-keys-202.wav)”></a-plane>
-                 <a-ring color=“black” radius-inner=“0.01” radius-outer=“0.1” position=“0.75 0 0.01”></a-ring>
-            </a-plane> 
-            </a-scene>
     <div align="center">
-        
+        <a-scene cursor="rayOrigin: mouse" background="color:cadetblue" ondblclick="this.requestFullscreen();" embedded>
             <a-entity gltf-model="url(bar.glb)"></a-entity>
             <a-entity gltf-model="url(jukebox.glb)" scale="0.75 0.75 0.75" position="-1 0 -2.5" playing>
                 <a-sound id="s1" src="url(come together.mp3)"></a-sound>
@@ -67,7 +56,7 @@
             </a-entity>
             <a-image id="1" src="url(beatles.jpg)" position="-2.55 1.66 -1.5" rotation="0 -90 0" guessing></a-image>
             <a-image id="2" src="url(rolling stones.jpg)" position="-2.55 1.66 1.55" rotation="0 -90 0" guessing></a-image>
-        
+        </a-scene>
     </div>
     <hr />
     <p><strong>Οδηγίες<strong>&nbsp;...</p>
@@ -76,5 +65,6 @@
 </body>
 
 </html>
+
 
    
