@@ -7,8 +7,8 @@
         AFRAME.registerComponent('playing', {
             init: function () {
                 this.el.addEventListener('click', function () {
-                    song = Math.ceil(Math.random() * 2);
-                    for (var i = 1; i <= 2; i++) document.getElementById('s' + i).components.sound.stopSound();
+                    song = Math.ceil(Math.random() * 4);
+                    for (var i = 1; i <= 4; i++) document.getElementById('s' + i).components.sound.stopSound();
                     document.getElementById('s' + song).components.sound.playSound();
                 });
             }
